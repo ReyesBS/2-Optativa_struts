@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.ui.theme" value="xhtml"/>
+    <constant name="struts.devMode" value="true"/>
+
+    <package name="org.demo.actions" namespace="/" extends="struts-default">
+
+        <action name="index" class="org.demo.actions.IndexAction" method="execute">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="formulario" class="org.demo.actions.FormularioAction">
+            <result name="success">formulario.jsp</result>
+
+        </action>
+        <action name="alumno" class="org.demo.actions.AlumnoAction" method="execute">
+            <result  name="success">alumno.jsp</result>
+            <result name="input">formulario.jsp</result>
+
+        </action>
+    </package>
+
+
+
+
+
+</struts>
